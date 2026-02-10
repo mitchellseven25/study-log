@@ -2,3 +2,88 @@ body {
   font-family: "Oswald", "Noto Sans JP", sans-serif;
   color: #333;
 }
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  width: 160px;
+  margin: 0 auto;
+}
+.button--contact {
+  background-color: #fff;
+}
+.button--contact .button__text {
+  color: #4a4a4a;
+}
+.button--X {
+  border: 1px solid #fff;
+}
+
+.button__icon-path {
+  fill: #fff;
+}
+.button__icon-path--contact {
+  fill: #4a4a4a;
+}
+
+.button__text {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+}
+
+.header {
+  background-color: #4a4a4a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header__container {
+  position: relative;
+}
+
+.header__logo {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.header__humberger {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 30px;
+  height: 36px;
+  background: url(../img/bg_menu.png) center center no-repeat;
+  background-size: contain;
+}
+
+.header__contents {
+  height: calc(100vh - 86px);
+  border-top: 1px solid #fff;
+  padding-top: 60px;
+}
+
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
