@@ -2,6 +2,9 @@ body {
   font-family: "Oswald", "Noto Sans JP", sans-serif;
   color: #333;
 }
+body.is-fixed {
+  overflow: hidden;
+}
 
 .button {
   display: -webkit-box;
@@ -70,11 +73,16 @@ body {
   background: url(../img/bg_menu.png) center center no-repeat;
   background-size: contain;
 }
+.header__humberger.is-checked {
+  background: url(../img/bg_menu-close.png) center center no-repeat;
+  background-size: contain;
+}
 
 .header__contents {
   height: calc(100vh - 86px);
   border-top: 1px solid #fff;
   padding-top: 60px;
+  display: none;
 }
 
 .header__nav-list {
