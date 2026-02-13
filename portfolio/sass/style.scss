@@ -91,7 +91,7 @@ body {
   height: calc(100vh - 86px);
   border-top: 1px solid $white;
   padding-top: 60px;
-display: none;
+  display: none;
 }
 
 .header__nav {
@@ -107,4 +107,37 @@ display: none;
 }
 
 .header__nav-link {
+}
+
+// fv
+.fv {
+  position: relative;
+}
+
+.fv__img {
+}
+
+.fv__text {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  width: 100%;
+  height: 209px;
+  background: url(../img/sp/bg_fv.png) center center no-repeat;
+  background-size: cover;
+  padding: 32px;
+}
+
+.fv__heading {
+  &-main {
+    display: block;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+  }
+
+  &-sub {
+    display: block;
+    font-size: 14px;
+    margin-top: 12px;
+  }
 }
