@@ -14,7 +14,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 6px 10px;
+  padding: 6px 10px 6px 30px;
   width: 160px;
   margin: 0 auto;
 
@@ -26,12 +26,15 @@ body {
     }
   }
 
-  &--X {
+  &--border {
     border: 1px solid $white;
   }
 }
 
 .button__icon {
+  width: 24px;
+  display: flex;
+  align-items: center;
 }
 
 .button__icon-path {
@@ -164,6 +167,10 @@ body {
     display: block;
     font-size: 11px;
   }
+
+  &--center {
+    text-align: center;
+  }
 }
 
 .section__lead {
@@ -242,7 +249,7 @@ body {
 
 .about__img {
   margin-bottom: 32px;
-  
+
   img {
     box-shadow: 0 4px 15px rgba($black, 0.15);
   }
@@ -258,4 +265,107 @@ body {
   & + & {
     margin-top: 1em;
   }
+}
+
+// flow
+.flow {
+  background-color: $bg-light;
+}
+
+.flow__list {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  margin-top: 64px;
+}
+
+.flow__item {
+  position: relative;
+  border: 1px solid $cl-border;
+  padding: 46px 16px 24px;
+
+  &-num {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background-color: $bg-dark;
+    color: $white;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-img {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &-name {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+// message
+.message {
+}
+
+.message__container {
+}
+.message__img {
+  margin-bottom: 32px;
+
+  img {
+    box-shadow: 0 4px 15px rgba($black, 0.15);
+  }
+}
+
+.message__contents {
+}
+
+.message__text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+// page-bottom
+.page-bottom {
+  color: $white;
+}
+
+.page-bottom__item {
+  padding: 40px;
+
+  &--contact {
+    background-color: $bg-gray-l;
+  }
+
+  &--X {
+    background-color: $bg-dark;
+  }
+}
+
+.page-bottom__btn {
+}
+
+// footer
+.footer {
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-copy {
+  font-size: 11px;
+  font-family: "Noto Sans JP", sans-serif;
 }
