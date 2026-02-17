@@ -18,8 +18,33 @@ body {
   width: 160px;
   margin: 0 auto;
 
+  @include mq("md") {
+    transition:
+      background 0.3s,
+      color 0.3s,
+      opacity 0.3s;
+
+    &:hover {
+      background-color: $white;
+
+      .button__icon-path {
+        fill: $bg-dark;
+      }
+
+      .button__text {
+        color: $bg-dark;
+      }
+    }
+  }
+
   &--contact {
     background-color: $white;
+
+    @include mq("md") {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
 
     .button__text {
       color: $bg-dark;
@@ -51,6 +76,17 @@ body {
   letter-spacing: 0.08em;
 }
 
+.wrapper {
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.main {
+  @include mq("md") {
+    flex-basis: 79.2%;
+  }
+}
 // header
 .header {
   background-color: $bg-dark;
@@ -59,10 +95,23 @@ body {
   left: 0;
   width: 100%;
   z-index: 100;
+
+  @include mq("md") {
+    position: relative;
+    flex-basis: 20.8%;
+    padding: 50px 20px;
+  }
 }
 
 .header__container {
   position: relative;
+
+  @include mq("md") {
+    width: 160px;
+    margin: 0 auto;
+    position: sticky;
+    top: 50px;
+  }
 }
 
 .header__logo {
@@ -70,6 +119,11 @@ body {
   padding: 14px 24px;
   font-size: 20px;
   color: $white;
+
+  @include mq("md") {
+    font-size: 20px;
+    letter-spacing: 0.12em;
+  }
 }
 
 .header__humberger {
@@ -84,6 +138,10 @@ body {
   background: url(../img/bg_menu.png) center center no-repeat;
   background-size: contain;
 
+  @include mq("md") {
+    display: none;
+  }
+
   &.is-checked {
     background: url(../img/bg_menu-close.png) center center no-repeat;
     background-size: contain;
@@ -95,6 +153,11 @@ body {
   border-top: 1px solid $white;
   padding-top: 60px;
   display: none;
+
+  @include mq("md") {
+    display: block;
+    border: none;
+  }
 }
 
 .header__nav {
@@ -129,6 +192,22 @@ body {
   background: url(../img/sp/bg_fv.png) center center no-repeat;
   background-size: cover;
   padding: 32px;
+
+  @include mq("md") {
+    background: url(../img/bg_fv.png) center center no-repeat;
+    background-size: cover;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 0;
+    width: 568px;
+    height: 174px;
+    padding-top: 24px;
+    padding-left: 96px;
+  }
+
+  @include mq("lg") {
+    bottom: 100px;
+  }
 }
 
 .fv__heading {
@@ -152,15 +231,32 @@ body {
 
 .section__inner {
   padding: 0 32px;
+
+  @include mq("md") {
+    max-width: calc(880px + 32px * 2);
+    margin: 0 auto;
+  }
 }
 
 .section__head {
   margin-bottom: 32px;
 
+  @include mq("md") {
+    margin-bottom: 24px;
+  }
+
   &-main {
     display: block;
     font-size: 40px;
     letter-spacing: 0.1em;
+
+    @include mq("md") {
+      font-size: 50px;
+    }
+
+    @include mq("lg") {
+      font-size: 60px;
+    }
   }
 
   &-sub {
@@ -187,12 +283,22 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .service__item {
   &-img {
     text-align: center;
     margin-bottom: 14px;
+
+    img {
+      width: 86px;
+      height: 69px;
+    }
   }
 
   &-name {
@@ -217,6 +323,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .works__item {
@@ -245,6 +356,12 @@ body {
 }
 
 .about__container {
+
+  @include mq("md") {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
 }
 
 .about__img {
@@ -277,6 +394,17 @@ body {
   flex-direction: column;
   gap: 46px;
   margin-top: 64px;
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 40px 16px;
+  }
+
+  @include mq("lg") {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
 }
 
 .flow__item {
@@ -302,6 +430,11 @@ body {
   &-img {
     margin-bottom: 24px;
     text-align: center;
+
+    img {
+      width: 66px;
+      height: 66px;
+    }
   }
 
   &-name {
@@ -322,7 +455,14 @@ body {
 }
 
 .message__container {
+    @include mq("md") {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+
 }
+
 .message__img {
   margin-bottom: 32px;
 
@@ -342,10 +482,19 @@ body {
 // page-bottom
 .page-bottom {
   color: $white;
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .page-bottom__item {
   padding: 40px;
+
+  @include mq("md") {
+    padding: 54px 10px;
+  }
 
   &--contact {
     background-color: $bg-gray-l;
