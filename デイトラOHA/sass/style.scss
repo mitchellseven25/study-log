@@ -1,0 +1,11 @@
+@use "color" as *;
+@use "font" as *;
+@use "breakpoints" as *;
+
+body {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-family: $font-family-ja;
+    color: $color-base;
+    background: $background-base;
+}
