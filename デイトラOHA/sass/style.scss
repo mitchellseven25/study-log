@@ -3,68 +3,94 @@
 @use "breakpoints" as *;
 
 body {
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    font-family: $font-family-ja;
-    color: $color-base;
-    background: $background-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-family: $font-family-ja;
+  color: $color-base;
+  background: $background-base;
 }
 
 // header
 .header {
-
 }
 
 .header__inner {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 22px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 15px;
+
+  @include mq("md") {
+    max-width: calc(1140px + 30px);
+    margin: 0 auto;
+  }
 }
 
 .header__logo {
-    width: 100px;
+  width: 100px;
+
+  @include mq("md") {
+    width: 135px;
+  }
 }
 
 .header__nav {
-display: none;
+  display: none;
+
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
 }
 
 .header__link {
-
+  @include mq("md") {
+    font-weight: 700;
+    letter-spacing: 0.48px;
+  }
 }
 
 .header__btn {
-
+  @include mq("md") {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.48px;
+    border-radius: 60px;
+    border: 2px solid #111;
+    background: #fff;
+    padding: 8px 28px;
+  }
 }
 
 .header__drawer-open {
-
+  @include mq("md") {
+    display: none;
+  }
 }
 
 // ドロワーボタン
 .drawer-icon {
-width: 36px;
-height: 21px;
-position: relative;
+  width: 36px;
+  height: 21px;
+  position: relative;
 }
 
 .drawer-icon__bar {
-position: absolute;
-top: 0;
-left: 0;
-width: 36px;
-height: 3px;
-border-radius: 6px;
-background: $color-base;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 3px;
+  border-radius: 6px;
+  background: $color-base;
 
-&:nth-of-type(1) {
-    
-}
-&:nth-of-type(2) {
-top: 9px;
-}
-&:nth-of-type(3) {
-top: 18px;
-}
+  &:nth-of-type(1) {
+  }
+  &:nth-of-type(2) {
+    top: 9px;
+  }
+  &:nth-of-type(3) {
+    top: 18px;
+  }
 }

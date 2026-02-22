@@ -18,13 +18,60 @@ body {
           align-items: center;
   padding: 22px 15px;
 }
+@media screen and (min-width: 768px) {
+  .header__inner {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
 
 .header__logo {
   width: 100px;
 }
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: 135px;
+  }
+}
 
 .header__nav {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__link {
+    font-weight: 700;
+    letter-spacing: 0.48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__btn {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.48px;
+    border-radius: 60px;
+    border: 2px solid #111;
+    background: #fff;
+    padding: 8px 28px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__drawer-open {
+    display: none;
+  }
 }
 
 .drawer-icon {
