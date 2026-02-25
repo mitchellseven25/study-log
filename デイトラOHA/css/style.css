@@ -6,6 +6,21 @@ body {
   background: #FAFAFA;
 }
 
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  border-radius: 60px;
+  border: 2px solid #111;
+  background: #fff;
+  padding: 8px 28px;
+}
+.btn-black {
+  color: #fff;
+  background: #111;
+  border: 2px solid #fff;
+}
+
 .header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,18 +72,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .header__btn {
-    display: inline-block;
-    font-weight: 700;
-    letter-spacing: 0.48px;
-    border-radius: 60px;
-    border: 2px solid #111;
-    background: #fff;
-    padding: 8px 28px;
-  }
-}
-
-@media screen and (min-width: 768px) {
   .header__drawer-open {
     display: none;
   }
@@ -94,4 +97,61 @@ body {
 }
 .drawer-icon__bar:nth-of-type(3) {
   top: 18px;
+}
+
+.mv {
+  max-width: calc(100% - 30px);
+  background: -webkit-gradient(linear, left top, left bottom, from(#F8B819), to(#F0D320));
+  background: linear-gradient(180deg, #F8B819 0%, #F0D320 100%);
+  border-radius: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mv__inner {
+  padding: 50px 20px 255px;
+  position: relative;
+}
+
+.mv__contents {
+  text-align: center;
+}
+
+.mv__lead1,
+.mv__lead2 {
+  -webkit-font-feature-settings: "palt" on;
+          font-feature-settings: "palt" on;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 2.2px;
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px;
+  display: inline-block;
+}
+
+.mv__lead2 {
+  margin-top: 8px;
+}
+
+.mv__text {
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  margin-top: 26px;
+}
+
+.mv__btn {
+  margin-top: 22px;
+}
+
+.mv__img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -108px;
+  text-align: center;
+}
+.mv__img img {
+  width: 345px;
 }
