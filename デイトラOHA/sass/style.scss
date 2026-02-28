@@ -108,15 +108,31 @@ body {
   border-radius: 20px;
   margin-right: auto;
   margin-left: auto;
+
+  @include mq("md") {
+    max-width: calc(100% - 60px);
+    border-radius: 30px;
+  }
 }
 
 .mv__inner {
   padding: 50px 20px 255px;
   position: relative;
+
+  @include mq("md") {
+    padding: 110px 30px 109px;
+    max-width: calc(1040px + 60px);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .mv__contents {
   text-align: center;
+
+  @include mq("md") {
+    text-align: left;
+  }
 }
 
 .mv__lead {
@@ -132,31 +148,65 @@ body {
   border-radius: 5px;
   background: #fff;
   padding: 10px;
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq("md") {
+    font-size: 38px;
+    letter-spacing: 3.8px;
+    padding: 12px 16px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .mv__lead2 {
   margin-top: 8px;
+
+  @include mq("md") {
+    margin-top: 14px;
+  }
 }
 
 .mv__text {
   font-weight: 700;
   letter-spacing: 0.48px;
   margin-top: 26px;
+
+  @include mq("md") {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    margin-top: 20px;
+  }
 }
 
 .mv__btn {
   margin-top: 22px;
+
+  @include mq("md") {
+    margin-top: 30px;
+  }
 }
 
 .mv__img {
   position: absolute;
   width: 100%;
-  left: 0;
+  right: 0;
   bottom: -108px;
   text-align: center;
-  
+
+  @include mq("md") {
+    bottom: -88px;
+    text-align: right;
+    width: calc(600px / 1100px * 100%);
+  }
   img {
     width: 345px;
+
+    @include mq("md") {
+      width: 600px;
+    }
   }
 }
