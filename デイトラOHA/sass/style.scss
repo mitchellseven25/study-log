@@ -32,6 +32,36 @@ body {
   }
 }
 
+.seciton__title {
+  text-align: center;
+
+  &-en {
+    font-family: $font-family-en;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 3.8px;
+
+    @include mq("md") {
+      font-size: 50px;
+      letter-spacing: 5px;
+    }
+  }
+
+  &-ja {
+    font-family: $font-family-en;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1.12px;
+    margin-top: 14px;
+
+    @include mq("md") {
+      font-size: 16px;
+      letter-spacing: 1.28px;
+    }
+  }
+}
+
 // header
 .header {
 }
@@ -499,5 +529,40 @@ body {
 
   @include mq("md") {
     margin-top: 15px;
+  }
+}
+
+// movie
+.movie {
+  background: url(../img/section-bg.png) repeat top left / 529px auto;
+}
+
+.movie__inner {
+  padding: 60px 15px;
+
+  @include mq("md") {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.movie__iframe {
+  margin-top: 32px;
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: 56px;
+  }
+
+  iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 345 / 194;
+    vertical-align: top;
+
+    @include mq("md") {
+      width: 640px;
+      aspect-ratio: 640 / 360;
+    }
   }
 }

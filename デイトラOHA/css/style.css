@@ -27,6 +27,36 @@ body {
   }
 }
 
+.seciton__title {
+  text-align: center;
+}
+.seciton__title-en {
+  font-family: "Montserrat", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 3.8px;
+}
+@media screen and (min-width: 768px) {
+  .seciton__title-en {
+    font-size: 50px;
+    letter-spacing: 5px;
+  }
+}
+.seciton__title-ja {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 1.12px;
+  margin-top: 14px;
+}
+@media screen and (min-width: 768px) {
+  .seciton__title-ja {
+    font-size: 16px;
+    letter-spacing: 1.28px;
+  }
+}
+
 .header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -520,5 +550,41 @@ body {
 @media screen and (min-width: 768px) {
   .about__btn {
     margin-top: 15px;
+  }
+}
+
+.movie {
+  background: url(../img/section-bg.png) repeat top left/529px auto;
+}
+
+.movie__inner {
+  padding: 60px 15px;
+}
+@media screen and (min-width: 768px) {
+  .movie__inner {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.movie__iframe {
+  margin-top: 32px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .movie__iframe {
+    margin-top: 56px;
+  }
+}
+.movie__iframe iframe {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 345/194;
+  vertical-align: top;
+}
+@media screen and (min-width: 768px) {
+  .movie__iframe iframe {
+    width: 640px;
+    aspect-ratio: 640/360;
   }
 }
