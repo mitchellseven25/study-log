@@ -10,19 +10,31 @@ body {
   background: $background-base;
 }
 
+.inner {
+  padding: 60px 15px;
+
+  @include mq("md") {
+    max-width: calc(1140px + 30px * 2);
+    padding: 50px 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .btn {
   display: inline-block;
   font-weight: 700;
   letter-spacing: 0.48px;
   border-radius: 60px;
-  border: 2px solid $color-base;
+  border: 2px solid currentColor;
   background: #fff;
   padding: 8px 28px;
+  text-align: center;
+  min-width: 150px;
 
   &-black {
     color: #fff;
     background: $color-base;
-    border: 2px solid #fff;
   }
 }
 
@@ -32,7 +44,7 @@ body {
   }
 }
 
-.seciton__title {
+.section__title {
   text-align: center;
 
   &-en {
@@ -304,14 +316,6 @@ body {
 }
 
 .news__inner {
-  padding: 60px 15px;
-
-  @include mq("md") {
-    max-width: calc(1140px + 30px * 2);
-    padding: 50px 30px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 .news__contents {
@@ -564,5 +568,90 @@ body {
       width: 640px;
       aspect-ratio: 640 / 360;
     }
+  }
+}
+
+// howto
+.howto {
+}
+
+.howto__contents {
+  margin-top: 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 112px;
+}
+
+.howto__box {
+  border-radius: 30px;
+  background: #fffbf0;
+  padding: 54px 40px 48px;
+  position: relative;
+}
+
+.howto__box__heading {
+  &--img {
+    width: 85px;
+    position: absolute;
+    top: -72px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  &--text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+  }
+}
+
+.howto__steps {
+}
+
+.howto__step {
+}
+
+.step-box {
+  padding-top: 50px;
+  padding-bottom: 26px;
+  text-align: center;
+  width: 265px;
+  border-radius: 30px;
+  border: 3px solid #111;
+  background: #fff;
+}
+
+.step-box__head {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  border: 3px solid #111;
+  background: $key-color1;
+  font-family: $font-family-en;
+  line-height: 1;
+
+  &--text {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+  }
+
+  &--num {
+    color: #fff;
+    font-size: 34px;
+    letter-spacing: 3.4px;
+    font-weight: 700;
+  }
+}
+
+.step-box__body {
+  &--img {
+    width: 160px;
+  }
+
+  &--text {
+    font-weight: 700;
+    letter-spacing: 0.48px;
   }
 }
