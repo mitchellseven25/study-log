@@ -607,22 +607,26 @@ body {
 }
 
 .howto__steps {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .howto__step {
 }
 
 .step-box {
-  padding-top: 50px;
-  padding-bottom: 26px;
-  text-align: center;
-  width: 265px;
-  border-radius: 30px;
-  border: 3px solid #111;
-  background: #fff;
+  padding-top: 45px;
+  position: relative;
 }
 
 .step-box__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
   width: 90px;
   height: 90px;
   border-radius: 45px;
@@ -630,22 +634,42 @@ body {
   background: $key-color1;
   font-family: $font-family-en;
   line-height: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .is-type2 & {
+    background: $key-color2;
+  }
 
   &--text {
+    font-family: $font-family-en;
     font-size: 13px;
     letter-spacing: 1.3px;
     font-weight: 700;
   }
 
   &--num {
+    font-family: $font-family-en;
     color: #fff;
     font-size: 34px;
     letter-spacing: 3.4px;
     font-weight: 700;
+    line-height: 1;
   }
 }
 
 .step-box__body {
+  border-radius: 30px;
+  border: 3px solid #111;
+  background: #fff;
+  padding: 50px 20px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
   &--img {
     width: 160px;
   }
@@ -653,5 +677,6 @@ body {
   &--text {
     font-weight: 700;
     letter-spacing: 0.48px;
+    text-align: center;
   }
 }
